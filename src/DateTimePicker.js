@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from "react";
+import { Glyphicon, Button, ButtonToolbar } from "react-bootstrap";
 import classnames from "classnames";
 import DateTimePickerDate from "./DateTimePickerDate.js";
 import DateTimePickerTime from "./DateTimePickerTime.js";
@@ -37,7 +38,9 @@ export default class DateTimePicker extends Component {
     widgetStyle: PropTypes.object,
     togglePicker: PropTypes.func,
     setSelectedHour: PropTypes.func,
-    setSelectedMinute: PropTypes.func
+    setSelectedMinute: PropTypes.func,
+    triggerOnChange: PropTypes.func.isRequired,
+    onClose: PropTypes.func.isRequired
   }
 
   renderDatePicker = () => {
@@ -109,6 +112,11 @@ export default class DateTimePicker extends Component {
           {this.renderSwitchButton()}
 
           {this.renderTimePicker()}
+
+            <ButtonToolbar className="pull-right">
+                <Button bsSize="small" onClick={this.props.onClose}>Cancel</Button>
+                <Button bsStyle="primary" bsSize="small" onClick={this.props.triggerOnChange}>Ok</Button>
+            </ButtonToolbar>
 
         </ul>
 

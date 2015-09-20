@@ -5,7 +5,7 @@ npm-debug.log
 test_bundle.js
 test-built/*
 .idea
+*.iml
 docs/*.html
 docs/assets/bundle.js
-lib/*
 /bower_components/
