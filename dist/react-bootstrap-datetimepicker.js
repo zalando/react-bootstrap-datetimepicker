@@ -361,7 +361,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this.setState({
 	          showPicker: true
 	        });
-	        gBCR = _this.refs.input.getBoundingClientRect();
+	        gBCR = _this.refs.input.getDOMNode().getBoundingClientRect();
 	        classes = {
 	          "bootstrap-datetimepicker-widget": true,
 	          "dropdown-menu": true

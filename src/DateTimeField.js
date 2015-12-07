@@ -290,7 +290,7 @@ export default class DateTimeField extends Component {
       this.setState({
         showPicker: true
       });
-      gBCR = this.refs.input.getBoundingClientRect();
+      gBCR = this.refs.input.getDOMNode().getBoundingClientRect();
       classes = {
         "bootstrap-datetimepicker-widget": true,
         "dropdown-menu": true
