@@ -296,23 +296,12 @@ export default class DateTimeField extends Component {
         "dropdown-menu": true
       };
       offset = {
-        top: gBCR.top + window.pageYOffset - document.documentElement.clientTop,
+        top: gBCR.top + gBCR.height + window.pageYOffset - document.documentElement.clientTop,
         left: gBCR.left + window.pageXOffset - document.documentElement.clientLeft
       };
-      offset.top = offset.top + this.refs.input.offsetHeight;
-      scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-      placePosition = this.props.direction === "up" ? "top" : this.props.direction === "bottom" ? "bottom" : this.props.direction === "auto" ? offset.top + this.refs.widget.offsetHeight > window.offsetHeight + scrollTop && this.refs.widget.offsetHeight + this.refs.datetimepicker.offsetHeight > offset.top ? "top" : "bottom" : void 0;
-      if (placePosition === "top") {
-        offset.top = -this.refs.widget.offsetHeight - this.clientHeight - 2;
-        classes.top = true;
-        classes.bottom = false;
-        classes["pull-right"] = true;
-      } else {
-        offset.top = 50;
-        classes.top = false;
-        classes.bottom = true;
-        classes["pull-right"] = true;
-      }
+      classes.top = false;
+      classes.bottom = true;
+      classes["pull-right"] = true;
       styles = {
         display: "block",
         position: "absolute",
