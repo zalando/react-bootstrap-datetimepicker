@@ -1,3 +1,10 @@
+
+This fork is used in an internal tool for Fraud Detection. 
+It has some minor behaviours and style changes in order to adapt the date and time picker to a special input field used inside the project.
+
+These changes are in the left_dialog and left_dialog_0.13 branches. left_dialog_0.13 is compatible with React 0.13.
+
+
 react-bootstrap-datetimepicker
 ===============================
 
